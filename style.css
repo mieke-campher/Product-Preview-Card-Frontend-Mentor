@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-img {
+    width: 100%;
+    display: block;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.information {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+  
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: hsl(212, 21%, 14%);
+}
+
+p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 15px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.main-price {
+    font-family: 'Fraunces', serif;
+    font-size: 25px;
+    color: hsl(158, 36%, 37%);
+}
+
+.past-price {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    text-decoration: line-through;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(158, 42%, 18%);
+}
+
+.cart-icon {
+    width: 16px;
+}
+
+
+@media (min-width: 768px){
+    .wrapper {
+        flex-direction: row;
+        max-width: 600px;
+        height: 450px;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .information {
+        width: 50%;
+        padding: 32px;
+    }
+}
